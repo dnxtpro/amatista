@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SESIÓN 75' · RECEPCIÓN + 1.er TIEMPO + BLOQUEO EN LECTURA</title>
+<style>
+  @page {
+    size: 297mm 210mm landscape;
+    margin: 3.5mm 4.5mm 3.5mm 4.5mm;
+  }
+  
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    line-height: 1.15;
+    font-size: 7.2pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .sheet-container {
+    width: 288mm;
+    height: 203mm;
+    max-height: 203mm;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 2.5mm 3mm;
+  }
+
+  /* HEADER */
+  header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5mm;
+    border-bottom: 1.5px solid #0f172a;
+    padding-bottom: 1.5mm;
+  }
+
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title-group h1 {
+    font-size: 11.5pt;
+    font-weight: 900;
+    letter-spacing: -0.2px;
+    color: #0f172a;
+    text-transform: uppercase;
+  }
+
+  .title-group .sub {
+    font-size: 7.5pt;
+    font-weight: 600;
+    color: #475569;
+    margin-top: 0.5px;
+  }
+
+  .header-badges {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+
+  .badge {
+    padding: 1.5px 5px;
+    border-radius: 3px;
+    font-size: 6.8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+  }
+  .badge-dark { background: #0f172a; color: #ffffff; }
+  .badge-team { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+
+  /* GOLDEN RULES BANNER */
+  .golden-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    background: #f1f5f9;
+    padding: 1.8px 4px;
+    border-radius: 3px;
+    border-left: 3px solid #0284c7;
+  }
+
+  .rule-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 6.9pt;
+  }
+
+  .rule-item strong {
+    color: #0369a1;
+    white-space: nowrap;
+  }
+
+  /* TIMELINE SUMMARY BAR */
+  .timeline-bar {
+    display: flex;
+    height: 5.2mm;
+    border-radius: 3px;
+    overflow: hidden;
+    font-weight: 800;
+    font-size: 6.3pt;
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  }
+
+  .tb-seg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.25);
+    padding: 0 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .tb-1 { background: #0d9488; width: 14%; } /* 10m */
+  .tb-2 { background: #2563eb; width: 37%; } /* 25m */
+  .tb-3 { background: #ea580c; width: 9%; }  /* 5m */
+  .tb-4 { background: #7c3aed; width: 31%; } /* 30m */
+  .tb-5 { background: #16a34a; width: 9%; }  /* 5m */
+
+  /* MAIN GRID (5 BLOCKS) */
+  .main-blocks {
+    display: grid;
+    grid-template-columns: 14% 37% 9% 31% 9%;
+    gap: 2.2mm;
+    height: 153mm;
+    margin-top: 1.5mm;
+  }
+
+  .block-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 2mm 2.2mm;
+    gap: 1.5mm;
+    min-width: 0;
+  }
+
+  /* Header of block */
+  .blk-header {
+    border-bottom: 1.5px solid;
+    padding-bottom: 1.2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .blk-1 .blk-header { border-color: #0d9488; }
+  .blk-2 .blk-header { border-color: #2563eb; }
+  .blk-3 .blk-header { border-color: #ea580c; }
+  .blk-4 .blk-header { border-color: #7c3aed; }
+  .blk-5 .blk-header { border-color: #16a34a; }
+
+  .blk-title {
+    font-size: 7.2pt;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .blk-1 .blk-title { color: #0f766e; }
+  .blk-2 .blk-title { color: #1d4ed8; }
+  .blk-3 .blk-title { color: #c2410c; }
+  .blk-4 .blk-title { color: #6d28d9; }
+  .blk-5 .blk-title { color: #15803d; }
+
+  .blk-time {
+    font-size: 6.5pt;
+    font-weight: 800;
+    background: #f1f5f9;
+    padding: 0.5px 3px;
+    border-radius: 2px;
+    color: #334155;
+    white-space: nowrap;
+  }
+
+  .blk-meta {
+    font-size: 6.2pt;
+    color: #334155;
+    line-height: 1.15;
+  }
+  .blk-meta strong {
+    color: #0f172a;
+  }
+
+  /* SVG CONTAINERS */
+  .svg-box {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .svg-box svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Cue box & Observable Criteria */
+  .cue-box {
+    background: #fefce8;
+    border-left: 2.5px solid #eab308;
+    padding: 1.5px 3px;
+    border-radius: 2px;
+    font-size: 6pt;
+    color: #713f12;
+    line-height: 1.15;
+  }
+  .cue-box strong { color: #854d0e; }
+
+  .obs-box {
+    background: #f0fdf4;
+    border-left: 2.5px solid #22c55e;
+    padding: 1.5px 3px;
+    border-radius: 2px;
+    font-size: 6pt;
+    color: #14532d;
+    line-height: 1.15;
+  }
+  .obs-box strong { color: #166534; }
+
+  /* SUB-COLUMNS IN BLOCK 2 */
+  .sub-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2mm;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .sub-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2mm;
+    background: #fafafa;
+    border: 1px solid #e2e8f0;
+    border-radius: 3px;
+    padding: 1.5mm;
+  }
+
+  .sub-col-title {
+    font-size: 6.7pt;
+    font-weight: 800;
+    color: #1e3a8a;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 0.8px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .chips-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+  }
+  .chip {
+    font-size: 5.7pt;
+    font-weight: 700;
+    padding: 0.5px 3px;
+    border-radius: 2px;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+  .chip-blue { background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe; }
+  .chip-amber { background: #fffbeb; color: #b45309; border-color: #fde68a; }
+  .chip-purple { background: #faf5ff; color: #7e22ce; border-color: #e9d5ff; }
+  .chip-red { background: #fef2f2; color: #b91c1c; border-color: #fecaca; }
+  .chip-green { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+
+  /* FOOTER COACH SCRIPT */
+  footer {
+    border-top: 1.5px solid #0f172a;
+    padding-top: 1.5mm;
+    display: grid;
+    grid-template-columns: 1.3fr 2.8fr 1.9fr;
+    gap: 3mm;
+    align-items: center;
+    background: #f8fafc;
+    border-radius: 3px;
+    padding: 1.5mm 3mm;
+  }
+
+  .coach-quote {
+    font-size: 6.2pt;
+    line-height: 1.15;
+    color: #1e293b;
+    border-left: 2.5px solid #3b82f6;
+    padding-left: 3px;
+  }
+  .coach-quote strong {
+    color: #1d4ed8;
+  }
+
+  .legend-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px 6px;
+    font-size: 5.8pt;
+    color: #334155;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .leg-item { display: inline-flex; align-items: center; gap: 2px; }
+
+  /* Diagram badges inside SVGs */
+  .svg-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+</head>
+<body>
+
+<div class="sheet-container">
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <div class="title-group">
+        <h1>Sesión 75' · Recepción + 1.er Tiempo + Bloqueo en Lectura</h1>
+        <div class="sub">Senior Femenino (10 jugadoras) · Objetivo: Pase estable a diana, corta por delante sincronizada y lectura sin adivinar</div>
+      </div>
+      <div class="header-badges">
+        <span class="badge badge-dark">10 Jugadoras</span>
+        <span class="badge badge-team">Total 75' (1h 15m)</span>
+        <span class="badge badge-team">5 Bloques</span>
+      </div>
+    </div>
+    <div class="golden-rules">
+      <div class="rule-item">
+        <strong>1. RECEPCIÓN:</strong> Llegar con pies; plataforma quieta y congelada en el contacto hacia diana.
+      </div>
+      <div class="rule-item">
+        <strong>2. CENTRAL:</strong> Llegar antes que el balón a la ventana de ataque (penúltimo apoyo al toque de Co).
+      </div>
+      <div class="rule-item">
+        <strong>3. BLOQUEO:</strong> Secuencia fija: Balón ➔ Colocadora ➔ Salida balón ➔ Atacante (nunca adivinar).
+      </div>
+    </div>
+  </header>
+
+  <!-- TIMELINE PROPORTIONAL BAR -->
+  <div class="timeline-bar">
+    <div class="tb-seg tb-1">00:00–00:10 (10') ACTIVACIÓN</div>
+    <div class="tb-seg tb-2">00:10–00:35 (25') TECNIFICACIÓN POR PUESTOS (A: R/L + B: C/OP)</div>
+    <div class="tb-seg tb-3">00:35 (5') TRAN.</div>
+    <div class="tb-seg tb-4">00:40–01:10 (30') WASH DRILL 5v5 (K1 + K2)</div>
+    <div class="tb-seg tb-5">01:10 (5') CALMA</div>
+  </div>
+
+  <!-- 5 MAIN BLOCKS GRID -->
+  <main class="main-blocks">
+
+    <!-- BLOQUE 1: ACTIVACIÓN DINÁMICA (10') -->
+    <section class="block-card blk-1">
+      <div class="blk-header">
+        <div class="blk-title">1. Activación Dinámica</div>
+        <div class="blk-time">00:00–00:10 · 10'</div>
+      </div>
+
+      <div class="blk-meta">
+        <strong>Org:</strong> Pasillo fondo/lateral 9–18m. Mov. continuo sin balón. 10 jugadoras.
+      </div>
+
+      <!-- Mini subtramos -->
+      <div style="display:flex; flex-direction:column; gap:1px; font-size:5.8pt; background:#f0fdfa; padding:1.5px; border-radius:2px; border-left:2px solid #0d9488;">
+        <div><strong>0'–3' (Suave):</strong> Zancada baja + rot. tórax ➔ Spiderman ➔ W-Y-T escápulas.</div>
+        <div><strong>3'–7' (Medio):</strong> Shuffle bajo ➔ Carioca ➔ Zancada lat. + rodilla arriba.</div>
+        <div><strong>7'–10' (Reactivo):</strong> Baby skips ➔ Speed skaters ➔ High skips progresivos.</div>
+      </div>
+
+      <!-- SVG ACTIVACIÓN -->
+      <div class="svg-box" style="height: 66mm;">
+        <svg viewBox="0 0 200 170" class="svg-text">
+          <defs>
+            <marker id="arr-teal" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#0d9488"/>
+            </marker>
+          </defs>
+          <!-- Pasillo track -->
+          <rect x="8" y="10" width="184" height="135" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+          
+          <!-- Estación 1: 0-3' Movilidad -->
+          <g transform="translate(14, 16)">
+            <rect x="0" y="0" width="50" height="122" rx="3" fill="#ffffff" stroke="#99f6e4" stroke-width="1"/>
+            <text x="25" y="10" font-size="6.5" font-weight="bold" fill="#0f766e" text-anchor="middle">0'–3' SUAVE</text>
+            <text x="25" y="18" font-size="5" fill="#64748b" text-anchor="middle">Movilidad Articular</text>
+            
+            <!-- Silueta Zancada/Spiderman -->
+            <circle cx="25" cy="35" r="4.5" fill="#0d9488"/>
+            <line x1="25" y1="39.5" x2="25" y2="52" stroke="#0d9488" stroke-width="2"/>
+            <!-- Brazos rotando -->
+            <line x1="25" y1="44" x2="14" y2="38" stroke="#0d9488" stroke-width="1.8"/>
+            <line x1="25" y1="44" x2="37" y2="48" stroke="#0d9488" stroke-width="1.8"/>
+            <!-- Piernas zancada baja -->
+            <line x1="25" y1="52" x2="16" y2="66" stroke="#0d9488" stroke-width="2"/>
+            <line x1="16" y1="66" x2="12" y2="66" stroke="#0d9488" stroke-width="2"/>
+            <line x1="25" y1="52" x2="35" y2="60" stroke="#0d9488" stroke-width="2"/>
+            <line x1="35" y1="60" x2="38" y2="66" stroke="#0d9488" stroke-width="2"/>
+            
+            <rect x="3" y="74" width="44" height="42" rx="2" fill="#f0fdfa"/>
+            <text x="25" y="83" font-size="4.8" font-weight="bold" fill="#134e4a" text-anchor="middle">• Zancada + rotación</text>
+            <text x="25" y="91" font-size="4.8" fill="#134e4a" text-anchor="middle">• Spiderman cadera</text>
+            <text x="25" y="99" font-size="4.8" fill="#134e4a" text-anchor="middle">• Bird-dog en suelo</text>
+            <text x="25" y="107" font-size="4.8" fill="#134e4a" text-anchor="middle">• W-Y-T escapular</text>
+          </g>
+
+          <!-- Flecha 1 -> 2 -->
+          <path d="M 66 75 L 73 75" stroke="#0d9488" stroke-width="2" marker-end="url(#arr-teal)"/>
+
+          <!-- Estación 2: 3-7' Desplazamiento -->
+          <g transform="translate(75, 16)">
+            <rect x="0" y="0" width="50" height="122" rx="3" fill="#ffffff" stroke="#fef08a" stroke-width="1"/>
+            <text x="25" y="10" font-size="6.5" font-weight="bold" fill="#854d0e" text-anchor="middle">3'–7' MEDIO</text>
+            <text x="25" y="18" font-size="5" fill="#64748b" text-anchor="middle">Desplazamiento</text>
+            
+            <!-- Silueta Shuffle/Carioca -->
+            <circle cx="25" cy="35" r="4.5" fill="#ca8a04"/>
+            <line x1="25" y1="39.5" x2="25" y2="52" stroke="#ca8a04" stroke-width="2"/>
+            <!-- Brazos posición alerta voley -->
+            <line x1="25" y1="44" x2="16" y2="44" stroke="#ca8a04" stroke-width="1.8"/>
+            <line x1="25" y1="44" x2="34" y2="44" stroke="#ca8a04" stroke-width="1.8"/>
+            <!-- Piernas flexionadas shuffle -->
+            <line x1="25" y1="52" x2="17" y2="60" stroke="#ca8a04" stroke-width="2"/>
+            <line x1="17" y1="60" x2="14" y2="66" stroke="#ca8a04" stroke-width="2"/>
+            <line x1="25" y1="52" x2="33" y2="60" stroke="#ca8a04" stroke-width="2"/>
+            <line x1="33" y1="60" x2="36" y2="66" stroke="#ca8a04" stroke-width="2"/>
+            
+            <!-- Flechas dinámicas de shuffle -->
+            <path d="M 12 55 L 7 55 M 38 55 L 43 55" stroke="#ca8a04" stroke-width="1.2"/>
+
+            <rect x="3" y="74" width="44" height="42" rx="2" fill="#fefce8"/>
+            <text x="25" y="83" font-size="4.8" font-weight="bold" fill="#713f12" text-anchor="middle">• Shuffle bajo (alerta)</text>
+            <text x="25" y="91" font-size="4.8" fill="#713f12" text-anchor="middle">• Carioca cadera</text>
+            <text x="25" y="99" font-size="4.8" fill="#713f12" text-anchor="middle">• Zancada lateral</text>
+            <text x="25" y="107" font-size="4.8" fill="#713f12" text-anchor="middle">• Rodilla arriba fwd</text>
+          </g>
+
+          <!-- Flecha 2 -> 3 -->
+          <path d="M 127 75 L 134 75" stroke="#0d9488" stroke-width="2" marker-end="url(#arr-teal)"/>
+
+          <!-- Estación 3: 7-10' Salto -->
+          <g transform="translate(136, 16)">
+            <rect x="0" y="0" width="50" height="122" rx="3" fill="#ffffff" stroke="#fecaca" stroke-width="1"/>
+            <text x="25" y="10" font-size="6.5" font-weight="bold" fill="#b91c1c" text-anchor="middle">7'–10' REACTIVO</text>
+            <text x="25" y="18" font-size="5" fill="#64748b" text-anchor="middle">Salto y Freno</text>
+            
+            <!-- Silueta Saltando -->
+            <circle cx="25" cy="30" r="4.5" fill="#dc2626"/>
+            <line x1="25" y1="34.5" x2="25" y2="47" stroke="#dc2626" stroke-width="2"/>
+            <line x1="25" y1="39" x2="16" y2="28" stroke="#dc2626" stroke-width="1.8"/>
+            <line x1="25" y1="39" x2="34" y2="28" stroke="#dc2626" stroke-width="1.8"/>
+            <!-- Piernas impulsando/en el aire -->
+            <line x1="25" y1="47" x2="19" y2="58" stroke="#dc2626" stroke-width="2"/>
+            <line x1="25" y1="47" x2="31" y2="58" stroke="#dc2626" stroke-width="2"/>
+            <!-- Ondas de despegue/impacto -->
+            <path d="M 18 64 Q 25 61 32 64" stroke="#dc2626" stroke-width="1.2" fill="none"/>
+
+            <rect x="3" y="74" width="44" height="42" rx="2" fill="#fef2f2"/>
+            <text x="25" y="83" font-size="4.8" font-weight="bold" fill="#7f1d1d" text-anchor="middle">• Baby skips tobillo</text>
+            <text x="25" y="91" font-size="4.8" fill="#7f1d1d" text-anchor="middle">• Speed skaters lat.</text>
+            <text x="25" y="99" font-size="4.8" fill="#7f1d1d" text-anchor="middle">• High skips / carrera</text>
+            <text x="25" y="107" font-size="4.8" fill="#7f1d1d" text-anchor="middle">• Saltos progresivos</text>
+          </g>
+
+          <!-- Barra inferior suave -> medio -> reactivo -->
+          <g transform="translate(14, 148)">
+            <rect x="0" y="0" width="172" height="12" rx="3" fill="#e2e8f0"/>
+            <text x="22" y="8.5" font-size="5.2" font-weight="bold" fill="#0f766e">🟢 Suave (0'-3')</text>
+            <text x="75" y="8.5" font-size="5.2" font-weight="bold" fill="#854d0e">➔ 🟡 Medio (3'-7')</text>
+            <text x="132" y="8.5" font-size="5.2" font-weight="bold" fill="#b91c1c">➔ 🔴 Reactivo (7'-10')</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="cue-box">
+        <strong>Consigna:</strong> “Calienta sin cansarte: postura baja, apoyos silenciosos y hombros activos.”
+      </div>
+      <div class="obs-box">
+        <strong>Criterio:</strong> Respiración controlada y listas para moverse bajo en pista.
+      </div>
+    </section>
+
+    <!-- BLOQUE 2: TECNIFICACIÓN POR PUESTOS (25') -->
+    <section class="block-card blk-2">
+      <div class="blk-header">
+        <div class="blk-title">2. Tecnificación por Puestos (Simultáneo A + B)</div>
+        <div class="blk-time">00:10–00:35 · 25'</div>
+      </div>
+
+      <div class="sub-cols">
+        
+        <!-- SUB-COLUMNA A: RECEPCIÓN Y LÍBEROS -->
+        <div class="sub-col">
+          <div class="sub-col-title">
+            <span>A. Receptoras y Líberos (5 jugadoras)</span>
+            <span class="chip chip-blue">25'</span>
+          </div>
+
+          <div style="font-size:5.8pt; color:#334155; line-height:1.15;">
+            <strong>Jugadoras:</strong> Camilla, Paula, Rocío, Olga, Izzy.<br>
+            <strong>Montaje:</strong> Emisora (saque 5m) ➔ Receptora activa ➔ Diana/Co virtual (fija) ➔ 2 Baloneras. Rotar c/90s. (Min 13+: variar altura; dedos si > pecho).
+          </div>
+
+          <!-- SVG CIRCUITO 4 PUESTOS + ROTACIÓN -->
+          <div class="svg-box" style="height: 38mm;">
+            <svg viewBox="0 0 175 95" class="svg-text">
+              <defs>
+                <marker id="arr-b2a" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+                </marker>
+                <marker id="arr-ball-sm" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                  <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706"/>
+                </marker>
+              </defs>
+              <rect x="4" y="4" width="167" height="87" rx="3" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1"/>
+              
+              <!-- Puesto 1: Emisora -->
+              <g transform="translate(18, 50)">
+                <circle cx="0" cy="0" r="7.5" fill="#0284c7"/>
+                <text x="0" y="2.5" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">1. Em</text>
+                <text x="0" y="13" font-size="4.8" fill="#0f172a" text-anchor="middle" font-weight="bold">Emisora</text>
+                <text x="0" y="19" font-size="4.2" fill="#64748b" text-anchor="middle">Saque 5m</text>
+              </g>
+
+              <!-- Balón en trayectoria saque -->
+              <path d="M 28 50 Q 55 42 75 48" stroke="#d97706" stroke-width="1.8" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-ball-sm)"/>
+              <circle cx="50" cy="44" r="3" fill="#facc15" stroke="#854d0e" stroke-width="0.8"/>
+
+              <!-- Puesto 2: Receptora activa -->
+              <g transform="translate(85, 52)">
+                <circle cx="0" cy="0" r="8.5" fill="#2563eb"/>
+                <text x="0" y="3" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">2. R</text>
+                <text x="0" y="14" font-size="5" fill="#1e3a8a" text-anchor="middle" font-weight="bold">Receptora</text>
+                <text x="0" y="20" font-size="4.2" fill="#059669" text-anchor="middle" font-weight="bold">Hold 2s</text>
+              </g>
+
+              <!-- Pase a diana -->
+              <path d="M 92 46 Q 115 32 135 34" stroke="#d97706" stroke-width="2" fill="none" marker-end="url(#arr-ball-sm)"/>
+              <circle cx="112" cy="35" r="3.2" fill="#facc15" stroke="#854d0e" stroke-width="0.8"/>
+
+              <!-- Puesto 3: Diana / Colocadora virtual -->
+              <g transform="translate(145, 36)">
+                <!-- Aro/Diana -->
+                <circle cx="0" cy="0" r="10" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <circle cx="0" cy="0" r="6" fill="#f59e0b"/>
+                <text x="0" y="2.5" font-size="5.5" font-weight="bold" fill="#ffffff" text-anchor="middle">3. Co</text>
+                <text x="0" y="14" font-size="4.8" fill="#854d0e" text-anchor="middle" font-weight="bold">Diana/Co</text>
+                <text x="0" y="20" font-size="4" fill="#64748b" text-anchor="middle">Fija (Z2-Z3)</text>
+              </g>
+
+              <!-- Puesto 4: 2 Baloneras / Espera -->
+              <g transform="translate(80, 16)">
+                <circle cx="-9" cy="0" r="5.5" fill="#64748b"/>
+                <text x="-9" y="2" font-size="4.8" fill="#fff" text-anchor="middle">4a</text>
+                <circle cx="9" cy="0" r="5.5" fill="#64748b"/>
+                <text x="9" y="2" font-size="4.8" fill="#fff" text-anchor="middle">4b</text>
+                <text x="0" y="9" font-size="4.5" fill="#475569" text-anchor="middle" font-weight="bold">2 Recuperadoras</text>
+              </g>
+
+              <!-- Flechas de rotación 90s -->
+              <path d="M 98 16 Q 135 12 145 22" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-b2a)"/>
+              <path d="M 145 52 Q 130 82 85 76" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-b2a)"/>
+              <path d="M 75 74 Q 30 78 20 62" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-b2a)"/>
+              <path d="M 18 38 Q 25 18 65 16" stroke="#2563eb" stroke-width="1.2" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-b2a)"/>
+
+              <rect x="5" y="5" width="52" height="11" rx="2" fill="#e0f2fe"/>
+              <text x="31" y="13" font-size="4.8" font-weight="bold" fill="#0369a1" text-anchor="middle">🔄 Rotación cada 90 seg</text>
+            </svg>
+          </div>
+
+          <!-- RECUADRO TÉCNICO: 3 MINI-SVGs -->
+          <div style="background:#f1f5f9; border:1px solid #cbd5e1; border-radius:3px; padding:1.5px; display:flex; flex-direction:column; gap:1px;">
+            <div style="font-size:5.8pt; font-weight:800; color:#0f172a; text-align:center;">DETALLE CLAVE: 3 FASES DE RECEPCIÓN</div>
+            <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:2px;">
+              
+              <!-- Mini 1: Llega -->
+              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:2px; padding:1px; text-align:center;">
+                <svg viewBox="0 0 50 38" style="width:100%; height:18mm;">
+                  <circle cx="25" cy="8" r="3.5" fill="#2563eb"/>
+                  <line x1="25" y1="11.5" x2="25" y2="22" stroke="#2563eb" stroke-width="1.8"/>
+                  <line x1="25" y1="15" x2="16" y2="20" stroke="#2563eb" stroke-width="1.5"/>
+                  <line x1="25" y1="15" x2="34" y2="20" stroke="#2563eb" stroke-width="1.5"/>
+                  <line x1="25" y1="22" x2="18" y2="32" stroke="#2563eb" stroke-width="1.8"/>
+                  <line x1="25" y1="22" x2="32" y2="32" stroke="#2563eb" stroke-width="1.8"/>
+                  <!-- Balón ombligo -->
+                  <circle cx="25" cy="18" r="2.8" fill="#facc15" stroke="#854d0e" stroke-width="0.6"/>
+                </svg>
+                <div style="font-size:5pt; font-weight:bold; color:#1e3a8a;">1. LLEGA</div>
+                <div style="font-size:4.2pt; color:#475569; line-height:1.1;">Pies cortos fwd; balón en ombligo</div>
+              </div>
+
+              <!-- Mini 2: Plataforma -->
+              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:2px; padding:1px; text-align:center;">
+                <svg viewBox="0 0 50 38" style="width:100%; height:18mm;">
+                  <!-- Hombros adelantados + antebrazos juntos -->
+                  <ellipse cx="25" cy="10" rx="9" ry="4" fill="#e2e8f0" stroke="#2563eb" stroke-width="1"/>
+                  <line x1="20" y1="11" x2="22" y2="26" stroke="#2563eb" stroke-width="2.2"/>
+                  <line x1="30" y1="11" x2="28" y2="26" stroke="#2563eb" stroke-width="2.2"/>
+                  <!-- Pulgares paralelos -->
+                  <rect x="23" y="25" width="4" height="6" rx="1" fill="#0284c7"/>
+                  <!-- Ángulo plano diana -->
+                  <line x1="17" y1="28" x2="33" y2="28" stroke="#ca8a04" stroke-width="1.2" stroke-dasharray="1.5,1"/>
+                </svg>
+                <div style="font-size:5pt; font-weight:bold; color:#1e3a8a;">2. PLATAFORMA</div>
+                <div style="font-size:4.2pt; color:#475569; line-height:1.1;">Hombros fwd, codos firmes, pulgares ||</div>
+              </div>
+
+              <!-- Mini 3: Hold 2s -->
+              <div style="background:#fff; border:1px solid #e2e8f0; border-radius:2px; padding:1px; text-align:center;">
+                <svg viewBox="0 0 50 38" style="width:100%; height:18mm;">
+                  <circle cx="20" cy="10" r="3.5" fill="#2563eb"/>
+                  <line x1="20" y1="13.5" x2="20" y2="24" stroke="#2563eb" stroke-width="1.8"/>
+                  <!-- Brazos congelados apuntando diana -->
+                  <line x1="20" y1="16" x2="34" y2="12" stroke="#059669" stroke-width="2"/>
+                  <path d="M 33 10 L 37 12 L 33 14" fill="#059669"/>
+                  <!-- Reloj congelar 2s -->
+                  <circle cx="38" cy="24" r="5" fill="#dcfce7" stroke="#16a34a" stroke-width="1"/>
+                  <text x="38" y="26" font-size="4.8" font-weight="bold" fill="#15803d" text-anchor="middle">2s</text>
+                </svg>
+                <div style="font-size:5pt; font-weight:bold; color:#15803d;">3. HOLD 2s</div>
+                <div style="font-size:4.2pt; color:#475569; line-height:1.1;">Congelar ángulo hacia la diana</div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="cue-box" style="font-size:5.6pt;">
+            <strong>Consignas:</strong> “Pies primero; brazos tranquilos. No balances: orienta y enseña la diana 2 segundos.”
+          </div>
+          <div class="obs-box" style="font-size:5.6pt;">
+            <strong>Criterio:</strong> 8/10 pases a ventana Z2–Z3 o llegan a diana sin que esta se desplace.
+          </div>
+        </div>
+
+        <!-- SUB-COLUMNA B: CENTRALES Y OPUESTAS -->
+        <div class="sub-col">
+          <div class="sub-col-title">
+            <span>B. Centrales y Opuestas (5 jugadoras)</span>
+            <span class="chip chip-blue">25'</span>
+          </div>
+
+          <div style="font-size:5.8pt; color:#334155; line-height:1.15;">
+            <strong>Jugadoras:</strong> Marilo, Vero, Safia (C); Marina, Fati (OP). Co/E en Z2–Z3.<br>
+            <strong>Serie (6 bolas/ronda):</strong> 3 corta central Z3 + 3 rápido OP Z2. 1 C al otro lado lee y bloquea.
+          </div>
+
+          <!-- 3 SVGs EN SUB-COL B -->
+          <div style="display:flex; flex-direction:column; gap:1.5mm; flex:1;">
+            
+            <!-- SVG 1: Corta por delante (Principal) -->
+            <div class="svg-box" style="height: 38mm;">
+              <svg viewBox="0 0 175 105" class="svg-text">
+                <defs>
+                  <marker id="arr-c-step" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+                  </marker>
+                  <marker id="arr-ball-b" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+                    <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b"/>
+                  </marker>
+                </defs>
+                <!-- Cancha: Red negra gruesa arriba -->
+                <rect x="2" y="2" width="171" height="101" fill="#eff6ff" stroke="#94a3b8" stroke-width="1"/>
+                <line x1="2" y1="12" x2="173" y2="12" stroke="#0f172a" stroke-width="3.5"/>
+                <text x="12" y="9" font-size="5.5" font-weight="bold" fill="#0f172a">RED</text>
+                <text x="60" y="22" font-size="5.5" font-weight="bold" fill="#94a3b8">ZONA 3</text>
+                <text x="135" y="22" font-size="5.5" font-weight="bold" fill="#94a3b8">ZONA 2</text>
+
+                <!-- Colocadora Co en Z2-Z3 -->
+                <g transform="translate(108, 20)">
+                  <circle cx="0" cy="0" r="7.5" fill="#f59e0b"/>
+                  <text x="0" y="2.5" font-size="6" font-weight="bold" fill="#ffffff" text-anchor="middle">Co</text>
+                </g>
+                <!-- Balón llegando a Co -->
+                <path d="M 155 75 Q 130 45 113 26" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-ball-b)"/>
+                <circle cx="140" cy="55" r="3" fill="#facc15" stroke="#854d0e" stroke-width="0.8"/>
+
+                <!-- Central C saliendo detrás/izq de Co -->
+                <g transform="translate(55, 75)">
+                  <circle cx="0" cy="0" r="8" fill="#16a34a"/>
+                  <text x="0" y="2.5" font-size="6.5" font-weight="bold" fill="#ffffff" text-anchor="middle">C</text>
+                </g>
+
+                <!-- Carrera con 3 pasos numerados de C hacia delante de Co -->
+                <path d="M 58 68 Q 66 50 78 40 Q 86 32 94 22" stroke="#2563eb" stroke-width="2" fill="none" marker-end="url(#arr-c-step)"/>
+
+                <!-- Etiquetas de pasos -->
+                <text x="50" y="58" font-size="4.5" font-weight="bold" fill="#2563eb">1. Preparar</text>
+                <text x="63" y="44" font-size="4.5" font-weight="bold" fill="#1d4ed8">2. Penúltimo (al toque Co)</text>
+                
+                <!-- Ventana de ataque y salto C (0.5-1m de red y delante Co) -->
+                <ellipse cx="94" cy="20" rx="7" ry="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.2" stroke-dasharray="2,1"/>
+                <!-- Estrella roja de contacto -->
+                <polygon points="94,15 96,19 100,19 97,22 98,26 94,23 90,26 91,22 88,19 92,19" fill="#dc2626"/>
+                <text x="86" y="11" font-size="4.5" font-weight="bold" fill="#dc2626">¡SALTO VERTICAL!</text>
+
+                <!-- Balón rápido/tenso de Co a C -->
+                <path d="M 103 19 L 96 19" stroke="#ea580c" stroke-width="2" marker-end="url(#arr-ball-b)"/>
+
+                <!-- Badges de consignas técnicas -->
+                <g transform="translate(6, 85)">
+                  <rect x="0" y="0" width="80" height="13" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+                  <text x="40" y="6" font-size="4.5" font-weight="bold" fill="#b91c1c" text-anchor="middle">⚠️ NO esperar a ver colocación</text>
+                  <text x="40" y="11" font-size="4.3" fill="#1e293b" text-anchor="middle">Llega antes que el balón</text>
+                </g>
+                <g transform="translate(90, 85)">
+                  <rect x="0" y="0" width="76" height="13" rx="2" fill="#ffffff" stroke="#cbd5e1"/>
+                  <text x="38" y="6" font-size="4.5" font-weight="bold" fill="#0369a1" text-anchor="middle">🎯 Contacto alto delante hombro</text>
+                  <text x="38" y="11" font-size="4.3" fill="#1e293b" text-anchor="middle">Ventana 0.5–1m de la red</text>
+                </g>
+              </svg>
+            </div>
+
+            <!-- FILA DE 2 SVGs: Lectura de bloqueo + Opuesta Z2 -->
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.5mm; height: 32mm;">
+              
+              <!-- SVG 2: Lectura de Bloqueo -->
+              <div class="svg-box">
+                <svg viewBox="0 0 110 80" class="svg-text">
+                  <rect x="2" y="2" width="106" height="76" rx="2" fill="#fff" stroke="#cbd5e1"/>
+                  <line x1="2" y1="8" x2="108" y2="8" stroke="#0f172a" stroke-width="2.5"/>
+                  <text x="6" y="6.5" font-size="4.5" font-weight="bold" fill="#0f172a">RED</text>
+
+                  <!-- Central bloqueadora en Z3 -->
+                  <circle cx="55" cy="18" r="6" fill="#7c3aed"/>
+                  <text x="55" y="20.5" font-size="5.5" font-weight="bold" fill="#fff" text-anchor="middle">C Bloq</text>
+
+                  <!-- Secuencia ocular 4 pasos -->
+                  <g transform="translate(6, 27)">
+                    <rect x="0" y="0" width="98" height="26" rx="2" fill="#f8fafc" stroke="#e2e8f0"/>
+                    <text x="49" y="7" font-size="4.5" font-weight="bold" fill="#6d28d9" text-anchor="middle">SECUENCIA OCULAR (Lectura)</text>
+                    <text x="4" y="15" font-size="4.2" font-weight="bold" fill="#0f172a">1. Balón ➔ 2. Co ➔ 3. Salida ➔ 4. Atacante</text>
+                    <text x="4" y="22" font-size="3.8" fill="#64748b">Fijar con pies rápidos tras ver salida de manos</text>
+                  </g>
+
+                  <!-- Señal prohibición saltar antes -->
+                  <g transform="translate(10, 56)">
+                    <circle cx="8" cy="8" r="7" fill="#fee2e2" stroke="#dc2626" stroke-width="1.2"/>
+                    <line x1="3" y1="3" x2="13" y2="13" stroke="#dc2626" stroke-width="1.5"/>
+                    <text x="19" y="7" font-size="4.5" font-weight="bold" fill="#b91c1c">PROHIBIDO saltar antes</text>
+                    <text x="19" y="13" font-size="3.8" fill="#475569">de que el balón salga de Co</text>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- SVG 3: Opuesta en Z2 -->
+              <div class="svg-box">
+                <svg viewBox="0 0 110 80" class="svg-text">
+                  <defs>
+                    <marker id="arr-op" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+                      <path d="M 0 1 L 10 5 L 0 9 z" fill="#0284c7"/>
+                    </marker>
+                  </defs>
+                  <rect x="2" y="2" width="106" height="76" rx="2" fill="#eff6ff" stroke="#cbd5e1"/>
+                  <line x1="2" y1="8" x2="108" y2="8" stroke="#0f172a" stroke-width="2.5"/>
+                  <line x1="88" y1="8" x2="88" y2="78" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="2,2"/> <!-- Banda lat der -->
+                  <line x1="2" y1="42" x2="88" y2="42" stroke="#94a3b8" stroke-width="1"/> <!-- Línea 3m -->
+                  <text x="5" y="40" font-size="4" fill="#94a3b8">Línea 3m</text>
+
+                  <!-- Salida de OP fuera de banda y >1m tras 3m -->
+                  <circle cx="98" cy="56" r="6" fill="#0284c7"/>
+                  <text x="98" y="58" font-size="5" font-weight="bold" fill="#fff" text-anchor="middle">OP</text>
+                  <text x="98" y="67" font-size="3.8" fill="#0369a1" text-anchor="middle">>1m tras 3m</text>
+
+                  <!-- Carrera curva 4 pasos a Z2 -->
+                  <path d="M 95 52 Q 86 36 68 20" stroke="#0284c7" stroke-width="1.8" fill="none" marker-end="url(#arr-op)"/>
+                  <text x="82" y="32" font-size="4" font-weight="bold" fill="#0369a1">4 pasos</text>
+
+                  <!-- 3 salidas de ataque -->
+                  <path d="M 66 18 L 25 35" stroke="#ea580c" stroke-width="1.2" marker-end="url(#arr-op)"/> <!-- Diag media -->
+                  <text x="32" y="28" font-size="3.8" fill="#c2410c" font-weight="bold">1. Diagonal</text>
+
+                  <path d="M 68 16 L 68 3" stroke="#ea580c" stroke-width="1.2" marker-end="url(#arr-op)"/> <!-- Línea -->
+                  <text x="70" y="6" font-size="3.8" fill="#c2410c" font-weight="bold">2. Línea</text>
+
+                  <path d="M 64 16 L 50 10" stroke="#ea580c" stroke-width="1.2" stroke-dasharray="2,1" marker-end="url(#arr-op)"/> <!-- Block-out -->
+                  <text x="36" y="11" font-size="3.8" fill="#c2410c" font-weight="bold">3. Manos-fuera</text>
+                </svg>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="cue-box" style="font-size:5.6pt;">
+            <strong>Consignas:</strong> Central: “Gana la carrera; penúltimo al toque de Co.” | Bloqueo: “Muévete cuando el balón sale, no antes.” | OP: “Abre fuera para ver balón y campo.”
+          </div>
+          <div class="obs-box" style="font-size:5.6pt;">
+            <strong>Criterio:</strong> C salta a tiempo delante de Co; bloqueo rival reacciona tras la salida.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BLOQUE 3: TRANSICIÓN + HIDRATACIÓN (5') -->
+    <section class="block-card blk-3">
+      <div class="blk-header">
+        <div class="blk-title">3. Hidratación</div>
+        <div class="blk-time">00:35 · 5'</div>
+      </div>
+
+      <div class="blk-meta">
+        <strong>Reagrupación:</strong> 10 jugadoras al banquillo. Beber, chequear pulso y fijar 3 consignas.
+      </div>
+
+      <!-- SVG BANQUILLO + BOTICÓN + BOCADILLOS -->
+      <div class="svg-box" style="height: 66mm;">
+        <svg viewBox="0 0 110 165" class="svg-text">
+          <rect x="2" y="2" width="106" height="161" rx="3" fill="#fffbeb" stroke="#fde68a"/>
+          
+          <!-- Banquillo con 10 jugadoras -->
+          <rect x="10" y="10" width="90" height="20" rx="3" fill="#e2e8f0" stroke="#94a3b8"/>
+          <!-- 10 jugadoras sentadas -->
+          <circle cx="16" cy="18" r="3.5" fill="#2563eb"/>
+          <circle cx="24" cy="18" r="3.5" fill="#2563eb"/>
+          <circle cx="32" cy="18" r="3.5" fill="#2563eb"/>
+          <circle cx="40" cy="18" r="3.5" fill="#2563eb"/>
+          <circle cx="48" cy="18" r="3.5" fill="#2563eb"/>
+          <circle cx="56" cy="18" r="3.5" fill="#16a34a"/>
+          <circle cx="64" cy="18" r="3.5" fill="#16a34a"/>
+          <circle cx="72" cy="18" r="3.5" fill="#16a34a"/>
+          <circle cx="80" cy="18" r="3.5" fill="#0284c7"/>
+          <circle cx="88" cy="18" r="3.5" fill="#0284c7"/>
+          <text x="52" y="8" font-size="4.8" font-weight="bold" fill="#713f12" text-anchor="middle">Banquillo (10 jugadoras)</text>
+
+          <!-- Botella de agua -->
+          <g transform="translate(50, 32)">
+            <rect x="0" y="3" width="8" height="14" rx="2" fill="#0284c7"/>
+            <rect x="2" y="0" width="4" height="3" fill="#38bdf8"/>
+            <text x="4" y="23" font-size="4.5" font-weight="bold" fill="#0369a1" text-anchor="middle">Agua 💧</text>
+          </g>
+
+          <!-- Bocadillo 1 literal -->
+          <g transform="translate(6, 62)">
+            <rect x="0" y="0" width="98" height="28" rx="3" fill="#ffffff" stroke="#ea580c" stroke-width="1"/>
+            <text x="5" y="9" font-size="4.8" font-weight="bold" fill="#c2410c">1. PASE:</text>
+            <text x="5" y="16" font-size="4.6" fill="#0f172a">“Pase a ventana Z2–Z3;</text>
+            <text x="5" y="23" font-size="4.6" fill="#0f172a">plataforma estable.”</text>
+          </g>
+
+          <!-- Bocadillo 2 literal -->
+          <g transform="translate(6, 95)">
+            <rect x="0" y="0" width="98" height="32" rx="3" fill="#ffffff" stroke="#16a34a" stroke-width="1"/>
+            <text x="5" y="9" font-size="4.8" font-weight="bold" fill="#15803d">2. CENTRAL:</text>
+            <text x="5" y="16" font-size="4.6" fill="#0f172a">“Entra aunque el pase</text>
+            <text x="5" y="23" font-size="4.6" fill="#0f172a">no sea perfecto;</text>
+            <text x="5" y="29" font-size="4.6" fill="#15803d" font-weight="bold">crea amenaza siempre.”</text>
+          </g>
+
+          <!-- Bocadillo 3 literal -->
+          <g transform="translate(6, 131)">
+            <rect x="0" y="0" width="98" height="28" rx="3" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+            <text x="5" y="9" font-size="4.8" font-weight="bold" fill="#0369a1">3. OPUESTA:</text>
+            <text x="5" y="16" font-size="4.6" fill="#0f172a">“Abre fuera para</text>
+            <text x="5" y="23" font-size="4.6" fill="#0f172a">conservar opciones.”</text>
+          </g>
+
+        </svg>
+      </div>
+
+      <div class="cue-box" style="font-size:5.5pt;">
+        <strong>Transfer:</strong> Beber rápido, fijar mirada y entrar con máxima energía al Wash.
+      </div>
+    </section>
+
+    <!-- BLOQUE 4: WASH DRILL 5v5 (30') -->
+    <section class="block-card blk-4">
+      <div class="blk-header">
+        <div class="blk-title">4. Wash Drill 5v5 (K1 Salida + K2 Contraataque)</div>
+        <div class="blk-time">00:40–01:10 · 30'</div>
+      </div>
+
+      <div style="display:flex; justify-content:space-between; align-items:center; font-size:5.8pt; background:#f5f3ff; padding:1.5px 3px; border-radius:2px; border-left:2px solid #7c3aed;">
+        <div>
+          <strong>Blanco:</strong> Camilla (OH), Marilo (C), Marina (OP), Olga (L Z5/6) + R apoyo.<br>
+          <strong>Azul:</strong> Paula (OH), Vero (C), Fati (OP), Izzy (L Z5/6) + R apoyo.
+        </div>
+        <div style="text-align:right;">
+          <strong>Rotación:</strong> Rocío x OH c/3 washes | Safia x C c/5 pts.<br>
+          <strong>Puntos:</strong> Ganar 2 jugadas seguidas = <strong>+1 NETO</strong> (sets a 5).
+        </div>
+      </div>
+
+      <!-- SVG PISTA COMPLETA + FLUJO K1 / K2 -->
+      <div class="svg-box" style="height: 72mm;">
+        <svg viewBox="0 0 260 160" class="svg-text">
+          <defs>
+            <marker id="arr-w-ball" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#d97706"/>
+            </marker>
+            <marker id="arr-w-blue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+              <path d="M 0 1 L 10 5 L 0 9 z" fill="#2563eb"/>
+            </marker>
+          </defs>
+
+          <!-- Pista voleibol dividida (Campo Rival arriba, Campo Propio abajo) -->
+          <!-- Campo Rival (coral suave) -->
+          <rect x="6" y="6" width="138" height="68" fill="#fef2f2" stroke="#cbd5e1" stroke-width="1"/>
+          <!-- Campo Propio (azul suave) -->
+          <rect x="6" y="74" width="138" height="68" fill="#eff6ff" stroke="#cbd5e1" stroke-width="1"/>
+          
+          <!-- Red gruesa negra -->
+          <line x1="4" y1="74" x2="146" y2="74" stroke="#0f172a" stroke-width="3.5"/>
+          <text x="8" y="72" font-size="5" font-weight="bold" fill="#0f172a">RED</text>
+          
+          <!-- Líneas de 3 metros -->
+          <line x1="6" y1="51" x2="144" y2="51" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
+          <line x1="6" y1="97" x2="144" y2="97" stroke="#cbd5e1" stroke-width="1" stroke-dasharray="2,2"/>
+          <text x="8" y="95" font-size="4" fill="#94a3b8">Línea 3m</text>
+
+          <!-- Marcadores de Zonas campo propio -->
+          <text x="18" y="82" font-size="4.5" fill="#94a3b8">Z4</text>
+          <text x="70" y="82" font-size="4.5" fill="#94a3b8">Z3</text>
+          <text x="125" y="82" font-size="4.5" fill="#94a3b8">Z2</text>
+          <text x="18" y="138" font-size="4.5" fill="#94a3b8">Z5</text>
+          <text x="70" y="138" font-size="4.5" fill="#94a3b8">Z6</text>
+          <text x="125" y="138" font-size="4.5" fill="#94a3b8">Z1</text>
+
+          <!-- JUGADORAS EN CAMPO PROPIO (BLANCO/AZUL ACTIVO) -->
+          <!-- Co virtual / colocador -->
+          <circle cx="100" cy="80" r="5.5" fill="#f59e0b"/>
+          <text x="100" y="82" font-size="4.5" font-weight="bold" fill="#fff" text-anchor="middle">Co</text>
+
+          <!-- Central atacante C -->
+          <circle cx="70" cy="88" r="6" fill="#16a34a"/>
+          <text x="70" y="90" font-size="5" font-weight="bold" fill="#fff" text-anchor="middle">C</text>
+
+          <!-- Opuesta OP -->
+          <circle cx="132" cy="104" r="6" fill="#0284c7"/>
+          <text x="132" y="106" font-size="4.5" font-weight="bold" fill="#fff" text-anchor="middle">OP</text>
+
+          <!-- Líbero L en Z5/Z6 -->
+          <circle cx="50" cy="122" r="6" fill="#eab308"/>
+          <text x="50" y="124" font-size="5" font-weight="bold" fill="#0f172a" text-anchor="middle">L</text>
+
+          <!-- Receptora R en Z6/Z1 -->
+          <circle cx="95" cy="122" r="6" fill="#2563eb"/>
+          <text x="95" y="124" font-size="5" font-weight="bold" fill="#fff" text-anchor="middle">R</text>
+
+          <!-- CAMPO RIVAL: Saque + Bloqueo C rival -->
+          <circle cx="70" cy="67" r="6" fill="#7c3aed"/>
+          <text x="70" y="69" font-size="4.5" font-weight="bold" fill="#fff" text-anchor="middle">C Blq</text>
+          
+          <!-- Saque tenso a costura L-R -->
+          <circle cx="120" cy="16" r="5.5" fill="#475569"/>
+          <text x="120" y="18" font-size="4" fill="#fff" text-anchor="middle">Saq</text>
+          
+          <path d="M 115 22 Q 85 70 73 115" stroke="#d97706" stroke-width="1.8" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-w-ball)"/>
+          <text x="86" y="60" font-size="4.5" font-weight="bold" fill="#b45309">1. Saque costura L–R</text>
+
+          <!-- Pase a Z2-Z3 -->
+          <path d="M 72 118 Q 85 105 97 85" stroke="#2563eb" stroke-width="1.8" fill="none" marker-end="url(#arr-w-blue)"/>
+          <text x="92" y="102" font-size="4.2" font-weight="bold" fill="#1d4ed8">2. Pase diana</text>
+
+          <!-- Opción A: Corta C / Opción B: Opuesta Z2 -->
+          <path d="M 98 78 L 78 78" stroke="#16a34a" stroke-width="1.8" marker-end="url(#arr-w-blue)"/>
+          <text x="76" y="73" font-size="4.5" font-weight="bold" fill="#15803d">Opc A: Corta</text>
+
+          <path d="M 104 80 L 128 78" stroke="#0284c7" stroke-width="1.8" stroke-dasharray="2,1" marker-end="url(#arr-w-blue)"/>
+          <text x="114" y="73" font-size="4.5" font-weight="bold" fill="#0369a1">Opc B: Z2</text>
+
+          <!-- Entrenador introduciendo balón de K2 -->
+          <g transform="translate(16, 18)">
+            <circle cx="0" cy="0" r="6" fill="#0f172a"/>
+            <text x="0" y="2" font-size="5" font-weight="bold" fill="#fff" text-anchor="middle">E</text>
+            <text x="14" y="2" font-size="4.5" font-weight="bold" fill="#0f172a">Balón K2</text>
+          </g>
+          <path d="M 22 22 Q 40 45 48 112" stroke="#dc2626" stroke-width="1.8" stroke-dasharray="2,2" fill="none" marker-end="url(#arr-w-ball)"/>
+
+          <!-- COLUMNA DERECHA: FLUJO SECUENCIAL K1 Y K2 -->
+          <g transform="translate(150, 6)">
+            <!-- FASE 1: K1 -->
+            <rect x="0" y="0" width="104" height="66" rx="3" fill="#ffffff" stroke="#2563eb" stroke-width="1.2"/>
+            <rect x="0" y="0" width="104" height="12" rx="2" fill="#2563eb"/>
+            <text x="52" y="8.5" font-size="5.5" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 1 · K1 (Salida Recepción)</text>
+            
+            <text x="4" y="20" font-size="4.6" font-weight="bold" fill="#1e3a8a">1.</text> <text x="10" y="20" font-size="4.5" fill="#0f172a">Saque tenso a costura L–R.</text>
+            <text x="4" y="28" font-size="4.6" font-weight="bold" fill="#1e3a8a">2.</text> <text x="10" y="28" font-size="4.5" fill="#0f172a">Recepción con plataforma estable.</text>
+            <text x="4" y="36" font-size="4.6" font-weight="bold" fill="#1e3a8a">3.</text> <text x="10" y="36" font-size="4.5" fill="#0f172a">Colocación en ventana Z2–Z3.</text>
+            <text x="4" y="44" font-size="4.6" font-weight="bold" fill="#1e3a8a">4.</text> <text x="10" y="44" font-size="4.5" fill="#0f172a">A: Corta C  /  B: Rápido OP Z2.</text>
+            <text x="4" y="52" font-size="4.6" font-weight="bold" fill="#1e3a8a">5.</text> <text x="10" y="52" font-size="4.5" fill="#0f172a">Central rival lee y bloquea.</text>
+            <rect x="4" y="55" width="96" height="8" rx="1.5" fill="#dbeafe"/>
+            <text x="52" y="61" font-size="4.5" font-weight="bold" fill="#1e40af" text-anchor="middle">¿GANA K1? ➔ Pasa directo a Fase 2</text>
+          </g>
+
+          <g transform="translate(150, 76)">
+            <!-- FASE 2: K2 -->
+            <rect x="0" y="0" width="104" height="66" rx="3" fill="#ffffff" stroke="#7c3aed" stroke-width="1.2"/>
+            <rect x="0" y="0" width="104" height="12" rx="2" fill="#7c3aed"/>
+            <text x="52" y="8.5" font-size="5.5" font-weight="bold" fill="#ffffff" text-anchor="middle">FASE 2 · K2 (Contraataque)</text>
+            
+            <text x="4" y="20" font-size="4.6" font-weight="bold" fill="#6d28d9">1.</text> <text x="10" y="20" font-size="4.5" fill="#0f172a">E introduce balón comprometido.</text>
+            <text x="4" y="28" font-size="4.6" font-weight="bold" fill="#6d28d9">2.</text> <text x="10" y="28" font-size="4.5" fill="#0f172a">Defensa + reconstrucción urgente.</text>
+            <text x="4" y="36" font-size="4.6" font-weight="bold" fill="#6d28d9">3.</text> <text x="10" y="36" font-size="4.5" fill="#0f172a">Central transita: bloquea y ataca.</text>
+            
+            <rect x="4" y="40" width="96" height="10" rx="2" fill="#dcfce7" stroke="#22c55e" stroke-width="1"/>
+            <text x="52" y="47" font-size="5" font-weight="bold" fill="#15803d" text-anchor="middle">🏆 ¿GANA K2? ➔ +1 PUNTO NETO</text>
+
+            <rect x="4" y="52" width="96" height="10" rx="2" fill="#fee2e2" stroke="#ef4444" stroke-width="1"/>
+            <text x="52" y="59" font-size="5" font-weight="bold" fill="#b91c1c" text-anchor="middle">❌ ¿PIERDE K2? ➔ WASH (0) RESET</text>
+          </g>
+
+          <!-- BANDA INFERIOR DE CHIPS TÁCTICOS -->
+          <g transform="translate(6, 146)">
+            <rect x="0" y="0" width="248" height="11" rx="2" fill="#f1f5f9"/>
+            <text x="4" y="7.5" font-size="4.3" font-weight="bold" fill="#0f172a">CONDICIONANTES:</text>
+            <text x="42" y="7.5" font-size="4.2" fill="#1d4ed8">Pase ≤2.5m = Corta</text>
+            <text x="96" y="7.5" font-size="4.2" fill="#c2410c">Pase alejado = OP Z2</text>
+            <text x="150" y="7.5" font-size="4.2" fill="#b91c1c">Salto anticipado C = NULO</text>
+            <text x="212" y="7.5" font-size="4.2" font-weight="bold" fill="#6d28d9">Min 15+: Bloq = x2</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="chips-list">
+        <span class="chip chip-purple">Mini-sets a 5 netos</span>
+        <span class="chip chip-amber">Costura L–R obligatoria</span>
+        <span class="chip chip-red">Anticipar salto en bloqueo = Anulado</span>
+        <span class="chip chip-green">Min 15+: Bloqueo con lectura = Puntos dobles</span>
+      </div>
+
+      <div class="cue-box" style="font-size:5.5pt;">
+        <strong>Consignas:</strong> “K1 ordenado; K2 con urgencia. Dos acciones seguidas o no cuenta. Central transita y crea amenaza.”
+      </div>
+      <div class="obs-box" style="font-size:5.5pt;">
+        <strong>Criterio:</strong> Al menos 1 opción de primer tiempo en cada recepción jugable; comunicar costuras antes del saque.
+      </div>
+    </section>
+
+    <!-- BLOQUE 5: VUELTA A LA CALMA + DEBRIEF (5') -->
+    <section class="block-card blk-5">
+      <div class="blk-header">
+        <div class="blk-title">5. Vuelta Calma</div>
+        <div class="blk-time">01:10 · 5'</div>
+      </div>
+
+      <div class="blk-meta">
+        <strong>Secuencia:</strong> 3' caminar y bajar pulsaciones + movilidad; 2' círculo de cierre.
+      </div>
+
+      <!-- SVG CAMINATA + CÍRCULO + 3 CHECKS -->
+      <div class="svg-box" style="height: 66mm;">
+        <svg viewBox="0 0 110 165" class="svg-text">
+          <rect x="2" y="2" width="106" height="161" rx="3" fill="#f0fdf4" stroke="#bbf7d0"/>
+          
+          <!-- Pista con flecha caminata -->
+          <g transform="translate(10, 8)">
+            <rect x="0" y="0" width="90" height="42" rx="3" fill="#ffffff" stroke="#cbd5e1"/>
+            <text x="45" y="8" font-size="4.5" font-weight="bold" fill="#15803d" text-anchor="middle">3' Caminata y Movilidad</text>
+            
+            <!-- Flecha elíptica de caminar suave -->
+            <path d="M 20 25 C 20 15, 70 15, 70 25 C 70 35, 20 35, 20 25" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2,2" fill="none"/>
+            <circle cx="20" cy="25" r="2.5" fill="#10b981"/>
+            <circle cx="70" cy="25" r="2.5" fill="#10b981"/>
+            <text x="45" y="26" font-size="4" fill="#047857" text-anchor="middle">Bajar pulsaciones</text>
+          </g>
+
+          <!-- Círculo final del equipo (2') -->
+          <g transform="translate(55, 72)">
+            <circle cx="0" cy="0" r="16" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="2,1"/>
+            <text x="0" y="1.5" font-size="4.5" font-weight="bold" fill="#166534" text-anchor="middle">2' Círculo</text>
+            
+            <!-- 10 jugadoras en círculo -->
+            <circle cx="0" cy="-16" r="3" fill="#2563eb"/>
+            <circle cx="9.4" cy="-13" r="3" fill="#2563eb"/>
+            <circle cx="15.2" cy="-5" r="3" fill="#2563eb"/>
+            <circle cx="15.2" cy="5" r="3" fill="#16a34a"/>
+            <circle cx="9.4" cy="13" r="3" fill="#16a34a"/>
+            <circle cx="0" cy="16" r="3" fill="#16a34a"/>
+            <circle cx="-9.4" cy="13" r="3" fill="#0284c7"/>
+            <circle cx="-15.2" cy="5" r="3" fill="#0284c7"/>
+            <circle cx="-15.2" cy="-5" r="3" fill="#eab308"/>
+            <circle cx="-9.4" cy="-13" r="3" fill="#eab308"/>
+          </g>
+
+          <!-- 3 CHECKS GRANDES -->
+          <g transform="translate(6, 96)">
+            <rect x="0" y="0" width="98" height="63" rx="3" fill="#ffffff" stroke="#22c55e" stroke-width="1"/>
+            <text x="49" y="8" font-size="4.8" font-weight="bold" fill="#14532d" text-anchor="middle">DEBRIEF: 3 CHECKS CLAVE</text>
+            
+            <!-- Check 1 -->
+            <rect x="5" y="14" width="7" height="7" rx="1.5" fill="#22c55e"/>
+            <path d="M 6.5 17.5 L 8 19.5 L 10.5 15.5" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+            <text x="15" y="18" font-size="4.3" font-weight="bold" fill="#0f172a">¿Llegamos con pies</text>
+            <text x="15" y="23" font-size="4.1" fill="#475569">a la recepción?</text>
+
+            <!-- Check 2 -->
+            <rect x="5" y="30" width="7" height="7" rx="1.5" fill="#22c55e"/>
+            <path d="M 6.5 33.5 L 8 35.5 L 10.5 31.5" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+            <text x="15" y="34" font-size="4.3" font-weight="bold" fill="#0f172a">¿Central llegó antes</text>
+            <text x="15" y="39" font-size="4.1" fill="#475569">que el balón?</text>
+
+            <!-- Check 3 -->
+            <rect x="5" y="46" width="7" height="7" rx="1.5" fill="#22c55e"/>
+            <path d="M 6.5 49.5 L 8 51.5 L 10.5 47.5" stroke="#ffffff" stroke-width="1.2" fill="none"/>
+            <text x="15" y="50" font-size="4.3" font-weight="bold" fill="#0f172a">¿Bloqueamos leyendo</text>
+            <text x="15" y="55" font-size="4.1" fill="#475569">y no adivinando?</text>
+          </g>
+        </svg>
+      </div>
+
+      <div class="cue-box" style="font-size:5.5pt;">
+        <strong>Cierre:</strong> Valorar esfuerzo colectivo y llevarse 1 aprendizaje individual.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER: MINI GUION DEL ENTRENADOR + LEYENDA -->
+  <footer>
+    <!-- Frase 1: Recepción -->
+    <div class="coach-quote">
+      <strong>RECEPCIÓN:</strong> “Muévete para que el balón te llegue delante. Cuando contactes, deja quieta la plataforma y enséñale a la colocadora hacia dónde la mandaste.”
+    </div>
+
+    <!-- Frase 2: Corta por delante -->
+    <div class="coach-quote" style="border-left-color: #16a34a;">
+      <strong>CORTA POR DELANTE:</strong> “Central, no persigas la pelota: gana la carrera. Cuando la colocadora toca, tú ya estás cerrando para saltar delante de ella; pide un balón bajo y rápido a tu hombro de ataque.”
+    </div>
+
+    <!-- Frase 3: Bloqueo + Leyenda compacta -->
+    <div style="display:flex; flex-direction:column; gap:1.5px;">
+      <div class="coach-quote" style="border-left-color: #7c3aed;">
+        <strong>BLOQUEO:</strong> “Primero mira balón, luego colocadora, vuelve al balón y acaba en la atacante. Si saltas antes de ver salir el balón, estás adivinando.”
+      </div>
+      <div class="legend-box">
+        <span class="leg-item"><span style="display:inline-block;width:8px;height:2px;background:#0f172a;"></span> Red</span>
+        <span class="leg-item"><span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#facc15;border:1px solid #854d0e;"></span> Balón</span>
+        <span class="leg-item"><span style="color:#d97706;font-weight:bold;">➔</span> Trayectoria</span>
+        <span class="leg-item"><span style="color:#2563eb;font-weight:bold;">➔</span> Mov. Jugadora</span>
+        <span class="leg-item"><span style="color:#dc2626;font-weight:bold;">★</span> Salto</span>
+        <span class="leg-item"><span style="display:inline-block;padding:0 2px;background:#e0f2fe;color:#0369a1;font-weight:bold;border-radius:2px;">R</span> Receptora</span>
+        <span class="leg-item"><span style="display:inline-block;padding:0 2px;background:#fef08a;color:#854d0e;font-weight:bold;border-radius:2px;">L</span> Líbero</span>
+        <span class="leg-item"><span style="display:inline-block;padding:0 2px;background:#dcfce7;color:#15803d;font-weight:bold;border-radius:2px;">C</span> Central</span>
+        <span class="leg-item"><span style="display:inline-block;padding:0 2px;background:#f59e0b;color:#fff;font-weight:bold;border-radius:2px;">Co</span> Colocadora</span>
+        <span class="leg-item"><span style="display:inline-block;padding:0 2px;background:#e0f2fe;color:#0284c7;font-weight:bold;border-radius:2px;">OP</span> Opuesta</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
